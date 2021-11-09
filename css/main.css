@@ -173,8 +173,8 @@ header::before {
   position: absolute;
   left: 0;
   bottom: 0px;
-  width: 70%;
-  min-height: 525px;
+  width: 80%;
+  min-height: 620px;
 }
 
 .col-55 {
@@ -235,7 +235,8 @@ header::before {
   padding: 20px 0;
   margin: 0;
 }
-.form-row input {
+
+.form-row input, .form-row select {
   width: 100%;
   border: none;
   background: transparent;
@@ -246,6 +247,7 @@ header::before {
   color: #060606;
   font-weight: 400;
   z-index: 1;
+  color: #707378;
 }
 .form-row label {
   font-size: 18px;
@@ -263,7 +265,15 @@ header::before {
 .form-row input[type=email]:hover ~ label,
 .form-row input[type=email]:focus ~ label,
 .form-row input[type=email]:active ~ label,
-.form-row input[type=email]:valid ~ label {
+.form-row input[type=email]:valid ~ label,
+.form-row input[type=number]:hover ~ label,
+.form-row input[type=number]:focus ~ label,
+.form-row input[type=number]:active ~ label,
+.form-row input[type=number]:valid ~ label,
+.form-row input[type=password]:hover ~ label,
+.form-row input[type=password]:focus ~ label,
+.form-row input[type=password]:active ~ label,
+.form-row input[type=password]:valid ~ label  {
   top: 0px;
   font-size: 12px;
 }
@@ -312,6 +322,55 @@ header::before {
   line-height: 1em;
   transition: all 0.5s linear;
 }
+
+.main-form-button-row {
+  margin: 0 -10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-form-button-row button {
+  flex: 1 0 45%;
+  border: 3px solid #5CBA49;
+  background: #5CBA49;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 15px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  line-height: 1em;
+  transition: all 0.5s linear;
+  margin: 0 10px;
+}
+
+.main-form-button-row button::after {
+  content: url("../img/arrow.webp");
+  margin-left: 14px;
+  width: 30px;
+  margin-top: 0px;
+  transition: all 0.5s linear;
+}
+
+.main-form-button-row button#prevBtn::after {
+  display: none;
+}
+
+.main-form-button-row button#prevBtn::before {
+  content: url("../img/arrow.webp");
+  margin-right: 14px;
+  width: 30px;
+  margin-bottom: 0px;
+  transition: all 0.5s linear;
+  transform: rotate(-180deg);
+}
+
 .submit-button::after {
   content: url("../img/arrow.webp");
   margin-left: 14px;
@@ -319,6 +378,13 @@ header::before {
   margin-top: -7px;
   transition: all 0.5s linear;
 }
+
+.main-form-button-row button:hover, .main-form-button-row button:focus, .main-form-button-row button:active {
+  border: 3px solid #4b973c;
+  background: #4b973c;
+  box-shadow: 0 10px 15px 0 #4b973c41;
+}
+
 .submit-button:hover, .submit-button:focus, .submit-button:active {
   border: 3px solid #4b973c;
   background: #4b973c;
@@ -1043,4 +1109,66 @@ h2.section-title {
   .testimonial_header-content .testimonial-date {
     font-size: 13px;
   }
+}
+
+input.invalid {
+  border-bottom: 1px solid #f44336;
+}
+
+input.invalid ~ label {
+  color: #f44336;
+}
+
+.circle-row {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.circle-row::before {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid #e8e7ed;
+  position: absolute;
+  z-index: -1;
+}
+
+/*.tab {
+  display: none;
+}*/
+
+.step {
+  background-color: #fff;
+  border: 1px solid #e8e7ed;
+  margin-right: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+}
+
+/* Mark the active step: */
+.step.active {
+  border-color: #5cba4a;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #5cba4a;
+}
+
+.tab {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opcity .5s linear, visibility .5s linear, display .6s linear;
+}
+
+.tabs-active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }

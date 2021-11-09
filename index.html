@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     <head>
     <meta charset="UTF-8">
@@ -35,7 +34,80 @@
                                 <img src="img/logo.webp" alt="GPSTab logo" width="78" height="97">
                             </div>
                             <h2>Sign up today for your free 7 day trial</h2>
-                            <form action="" method="get" class="main-form">
+
+                            <form id="regForm" action="" method="get" class="main-form">
+                                <div class="circle-row">
+                                    <!--<span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>-->
+                                </div>
+
+                                <div class="tab">
+                                    <div class="form-row">
+                                        <input type="text" name="form-name" oninput="this.className = ''" required>
+                                        <label for="form-name">First Name</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="text" name="form-last-name" oninput="this.className = ''" required>
+                                        <label for="form-last-name">Last name</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="email" name="form-email" oninput="this.className = ''" required>
+                                        <label for="form-email">Email</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div class="form-row">
+                                        <input type="text" name="form-company" oninput="this.className = ''" required>
+                                        <label for="form-company">Company Name</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="number" name="form-usdot" oninput="this.className = ''" required>
+                                        <label for="form-usdot">USDOT</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <select oninput="this.className = ''" required>
+                                            <option value="Alaskan standart time">Alaskan standart time</option>
+                                            <option value="Alaskan standart time">Alaskan standart time</option>
+                                            <option value="Alaskan standart time">Alaskan standart time</option>
+                                            <option value="Alaskan standart time">Alaskan standart time</option>
+                                            <option value="Alaskan standart time">Alaskan standart time</option>
+                                            <option value="Alaskan standart time">Alaskan standart time</option>
+                                            <option value="Alaskan standart time">Alaskan standart time</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="number" name="form-phone" oninput="this.className = ''" required>
+                                        <label for="form-phone">Phone Number</label>
+                                    </div>
+                                </div>
+
+                                <div class="tab">
+                                    <div class="form-row">
+                                        <input type="password" name="form-password"  oninput="this.className = ''" required>
+                                        <label for="form-password">Password</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="password" name="form-confirm-password" oninput="this.className = ''" required>
+                                        <label for="form-confirm-password">Confirm password</label>
+                                    </div>
+                                    <div class="form-row form-row-checkbox">
+                                        <label id="checkbox" for="checkbox">I want to recieve the weekly newsletter</label>
+                                        <input type="checkbox" name="checkbox">
+                                    </div>
+                                </div>
+                                
+                                <div class="main-form-button-row">
+                                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                </div>
+                                </form>
+
+
+
+
+                            <!--<form >
                                 <div class="form-row">
                                     <input type="email" name="form-email" value="" required>
                                     <label for="form-email">Email</label>
@@ -45,7 +117,7 @@
                                     <input type="checkbox" name="checkbox">
                                 </div>
                                 <button type="submit" class="submit-button">Start your 7 day trial</button>
-                            </form>
+                            </form>-->
                             <div class="terms-text">
                                 By clicking Get Started you create an account and agree to the
         <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>.
@@ -60,7 +132,7 @@
     <section class="testimonial-section">
         <div class="container">
             <div class="row">
-                <h3 class="green-title">Don’t be misled into a contract, there’s usually big expenses down the road</h3>
+                <h3 class="green-title">Don’t be misled into a contract, there’s usually big, hidden expenses.</h3>
                 <h2 class="section-title">
                     What people like you say about GPSTab
                 </h2>
@@ -265,8 +337,7 @@
         <div class="container">
             <div class="row">
                 <h2 class="section-title footer-form-section_title">
-                    Sign up today for your free 7 day trial,
-                    cancel anytime.                    
+                    Sign up today for your free 7 day trial
                 </h2>
                 <div class="footer-form-sub-title">
                     Get more miles and more money with your no contract provider.
